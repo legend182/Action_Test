@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"strconv"
 	hanlder "test/Hanlder"
 
@@ -8,6 +9,8 @@ import (
 )
 
 func main() {
+	var password = "sdasdasdasdawdwd"
+	fmt.Print(password)
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
 		c.String(200, "Hello, Gin!")
