@@ -13,7 +13,10 @@ func main() {
 		c.String(200, "Hello, Gin!")
 	})
 	r.GET("/add", Add)
-	r.Run(":2001")
+	err := r.Run(":2001")
+	if err != nil {
+		panic(err)
+	}
 }
 
 func Add(c *gin.Context) {
